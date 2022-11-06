@@ -1,0 +1,54 @@
+<link href="main.css" rel="stylesheet">
+
+<div id="overlay" class="modal-body">
+    <div id="popup2" class="main-popup-new-commande">
+    <section class="sec-5">
+      <div class="btnclosemargin">
+      <a id= "btnClose1" class="btnCloseNew">x</a>
+      </div>
+      <h2 class="title-newcommande">Nouvelle Commande ! </h2>
+      <p>{{test.first_name}}</p>
+      <br>
+      <p id="popupnew-created_at"></a></p>
+      <p id="popupnew-expected_time"><a style="font-weight: 100;"></a></p>
+      <p id="popupnew-service_type"><a style="font-weight: 100;"></a></p>
+      <p id="popupnew-namePaiement"><a style="font-weight: 100;"></a></p>
+      </section>
+      
+      <h1 class="pop"></h1>
+  
+      <section class="sec-5">
+        <h2>Produit</h2>
+        <section class="sec-3-produit-new">
+          <br>
+          <section class="cadre_scroll1 popup-content">
+            <p class="product-give"></p>
+            {% for items in show1 %}
+            <h1>{{ items.product_name }}<br>{{items.quantityProduct }}</h1>
+            {% for itemsoptions in show2 %}
+            {{itemsoptions.nameOption}}<br>
+            {% endfor %}
+            {% endfor %}
+          </section>
+        <br>
+      <p></p>
+      </section>
+      <h2 id="popupnew-amount" class="titlepop-total"></h2>
+      <div class="btn-accpt-refuse">
+      <a id="popupnew-btn-accept"></a>
+      <a id="popupnew-btn-refuse"></a>
+      </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    var myModalEl = document.getElementById('myModal');
+    var modal = bootstrap.Modal.getInstance(myModalEl);
+    modal.toggle();
+</script>
+
+
+
